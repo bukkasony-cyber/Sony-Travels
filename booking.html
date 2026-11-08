@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking | Sony Travels</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <a class="brand" href="index.html">
+        <span class="brand-mark">S</span>
+        <span>SONY <b>TRAVELS</b>
+            <small>DRIVE THE EXTRAORDINARY</small>
+        </span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+
+    <nav id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="cars.html">Our Cars</a>
+        <a href="booking.html" class="active">Booking</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <a class="header-cta" href="booking.html">Book a Ride <span>↗</span></a>
+
+</header>
+
+<main>
+
+    <section class="page-hero booking-banner">
+
+        <div class="page-hero-inner">
+            <div class="section-kicker">RESERVE YOUR RIDE</div>
+
+            <h1>Let's plan your<br><em>journey.</em></h1>
+
+            <p>Tell us where you want to go. We'll take it from there.</p>
+        </div>
+
+    </section>
+
+
+    <section class="section-wrap booking-layout">
+
+        <div class="booking-copy">
+
+            <div class="section-kicker">BOOK WITH SONY TRAVELS</div>
+
+            <h2>Your journey,<br><em>your way.</em></h2>
+
+            <p>
+                Complete the form with your travel details.
+                Book your preferred luxury car and enjoy a comfortable journey.
+            </p>
+
+            <div class="booking-note">
+                ✦ &nbsp; Simple. Comfortable. Memorable.
+            </div>
+
+        </div>
+
+
+        <form class="booking-form" id="bookingForm" action="save_booking.php" method="POST">
+
+            <h3>Booking details</h3>
+
+            <p class="form-subtitle">All fields marked * are required</p>
+
+            <div class="form-grid">
+
+                <label>
+                    Full name *
+                    <input type="text" name="name" placeholder="Enter your name" required>
+                </label>
+
+                <label>
+                    Phone number *
+                    <input type="tel" name="phone" placeholder="10-digit mobile number" pattern="[0-9]{10}" required>
+                </label>
+
+                <label class="full">
+                    Email address
+                    <input type="email" name="email" placeholder="Enter your email">
+                </label>
+
+                <label>
+                    Pickup location *
+                    <input type="text" name="pickup" placeholder="Pickup city / place" required>
+                </label>
+
+                <label>
+                    Destination *
+                    <input type="text" name="destination" placeholder="Where to?" required>
+                </label>
+
+                <label>
+                    Pickup date *
+                    <input type="date" name="date" id="tripDate" required>
+                </label>
+
+                <label>
+                    Pickup time *
+                    <input type="time" name="time" required>
+                </label>
+
+                <label class="full">
+                    Select a car *
+                    <select name="car" id="carSelect" required>
+                        <option value="">Choose your preferred car</option>
+                        <option>Mercedes-Benz S-Class</option>
+                        <option>BMW 7 Series</option>
+                        <option>Range Rover</option>
+                        <option>Toyota Fortuner</option>
+                        <option>Audi A8</option>
+                        <option>Toyota Innova Hycross</option>
+                    </select>
+                </label>
+
+                <label>
+                    Passengers
+                    <select name="passengers">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                    </select>
+                </label>
+
+                <label>
+                    Trip type
+                    <select name="trip">
+                        <option>One-way</option>
+                        <option>Round trip</option>
+                    </select>
+                </label>
+
+            </div>
+
+            <button class="button button-yellow submit-button" type="submit">
+                Submit Booking <span>↗</span>
+            </button>
+
+            <p class="form-message" id="formMessage" role="status"></p>
+
+        </form>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="footer-main section-wrap">
+
+        <div class="brand footer-brand">
+            <span class="brand-mark">S</span>
+            <span>SONY <b>TRAVELS</b>
+                <small>DRIVE THE EXTRAORDINARY</small>
+            </span>
+        </div>
+
+        <p>Make every mile a memorable one.</p>
+
+        <a href="booking.html" class="underlined-link">
+            Plan your journey <span>↗</span>
+        </a>
+
+    </div>
+
+    <div class="footer-bottom section-wrap">
+        <span>© 2026 Sony Travels. College project.</span>
+        <span>Luxury • Comfort • Experience</span>
+    </div>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
